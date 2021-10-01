@@ -35,12 +35,14 @@ function processPhrase(){
     if(secret_phase==checkphase){
         correct+=1
         alert("Access allowed")                                 
-        out.innerHTML = "Total correct counts= "+correct                          
+        out.innerHTML = "Total correct counts= "+correct+ "Total wrong counts= "+wrong                       
         
     } else {                            
         wrong+=1
-        alert("Access denied")              
-        out.innerHTML = "Total wrong counts= "+wrong                      
+        alert("Access denied") 
+        out.innerHTML = "Total correct counts= "+correct+ "Total wrong counts= "+wrong                       
+             
+                      
     }
 }
 </script>
