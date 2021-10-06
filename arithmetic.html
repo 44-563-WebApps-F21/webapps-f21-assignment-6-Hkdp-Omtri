@@ -27,6 +27,44 @@
             <label for="rg1_divide"> / </label>
             </br>
 
+        </form>
+        <p id="arithmetic">This text will be replaced </p>
+    </div>
+
+    <script>
+
+        function powers() {
+
+            console.log("Getting form values")
+            number1 = document.getElementById("form1_num1").value
+            number2 = document.getElementById("form1_num2").value
+            var result = "";
+
+
+            out = document.getElementById("output")
+            for (let i = 1; i <= number2; i++) {
+                result += Math.pow(number1, i) + " ";
+            }
+            out.innerHTML = "Powers of " + number1 + " are : " + result
+
+        }
+
+        function processRadio() {
+            let first = document.getElementById("form1_num1").value
+            let second = document.getElementById("form1_num2").value
+            var res;
+            plus = document.getElementById("rg1_plus").checked
+            minus = document.getElementById("rg1_minus").checked
+            times = document.getElementById("rg1_times").checked
+            divide = document.getElementById("rg1_divide").checked
+
+            if (plus) {
+                result = 0;
+                result = (Number)(first) + (Number)(second);
+                document.getElementById("arithmetic").innerHTML = " Sum of " + first + " and " + second + " = " + result;
+            }
+
+        }
 
     </script>
 
