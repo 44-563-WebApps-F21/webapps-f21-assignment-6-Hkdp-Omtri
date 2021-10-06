@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <body>
     <h2>Computes by HOMAKESAVADURGAPRASAD</h2>
     <div class="container-fluid">
@@ -14,7 +15,7 @@
         </form>
         <p id="output">This text will be replaced </p>
         <form>
-            <input type="radio" id="rg1_plus" name="operation" onclick="processRadio()" value="plus"> 
+            <input type="radio" id="rg1_plus" name="operation" onclick="processRadio()" value="plus">
             <label for="rg1_plus"> + </label>
             </br>
             <input type="radio" id="rg1_minus" name="operation" onclick="processRadio()" value="minus">
@@ -46,7 +47,6 @@
                 result += Math.pow(number1, i) + " ";
             }
             out.innerHTML = "Powers of " + number1 + " are : " + result
-
         }
 
         function processRadio() {
@@ -63,22 +63,25 @@
                 result = (Number)(first) + (Number)(second);
                 document.getElementById("arithmetic").innerHTML = " Sum of " + first + " and " + second + " = " + result;
             }
+
             if (minus) {
                 result = 0;
                 result = (Number)(first) - (Number)(second);
                 document.getElementById("arithmetic").innerHTML = " Subtraction of " + first + " and " + second + " = " + result;
             }
+
             if (times) {
                 result = 0;
                 result = (Number)(first) * (Number)(second);
                 document.getElementById("arithmetic").innerHTML = " Multiple of " + first + " and " + second + " = " + result;
             }
+
             if (divide) {
                 result = 0;
                 result = (Number)(first) / (Number)(second);
                 document.getElementById("arithmetic").innerHTML = " division of " + first + " and " + second + " = " + result;
             }
-    
+
         }
 
     </script>
