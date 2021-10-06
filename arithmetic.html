@@ -63,7 +63,12 @@
                 result = (Number)(first) + (Number)(second);
                 document.getElementById("arithmetic").innerHTML = " Sum of " + first + " and " + second + " = " + result;
             }
-
+            if (minus) {
+                result = 0;
+                result = (Number)(first) - (Number)(second);
+                document.getElementById("arithmetic").innerHTML = " Subtraction of " + first + " and " + second + " = " + result;
+            }
+    
         }
 
     </script>
