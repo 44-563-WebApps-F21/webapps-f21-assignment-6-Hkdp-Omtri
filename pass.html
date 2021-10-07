@@ -20,7 +20,11 @@
         var correct = 0;
         var wrong = 0;
         let usingImage = 1;
-        function processPhrase() {
+        function giveAlert(){
+    alert("Account locked")
+}
+        function processPhrase()
+        {
             console.log("Getting form values")
             pswd = document.getElementById("form1_pswd").value
             guess = document.getElementById("form1_guess").value
@@ -29,7 +33,14 @@
                 alert("Access allowed")
                 correct++
                 out.innerHTML = "correct: " + correct + " wrong: " + wrong
-            } else {
+            }
+            else if (wrong > 2) {
+                document.getElementById("btn1").onclick = giveAlert()
+                giveAlert()
+                wrong++
+                out.innerHTML = "Correct: " + correct + " Wrong: " + wrong;
+            }
+            else {
                 alert("Access denied")
                 wrong++
                 out.innerHTML = "correct: " + correct + " wrong: " + wrong
@@ -53,4 +64,3 @@
         }
     </script>
 </body>
-
